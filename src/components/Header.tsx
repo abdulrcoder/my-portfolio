@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { abdul, circle, mongodb, nodejs, reactjs } from "../assets";
+import { circle, mongodb, nodejs, reactjs } from "../assets";
 
 const scaleVariants = {
   whileInView: {
@@ -41,7 +41,7 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={abdul} alt="profile_bg" />
+        <img src={"/abdul.png"} alt="profile_bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}

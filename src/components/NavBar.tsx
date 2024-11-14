@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { close, github, linkedin, menu, twitter } from "../assets";
+import { close, github, leedcode, linkedin, menu, twitter } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState("");
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 backdrop-blur-md `}
+      className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 backdrop-blur-md`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -20,14 +21,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={"/logo.svg"}
-            alt="logo"
-            className="w-[50px] h-[50px] mt-2 "
-          />
+          <div className="w-[50px] h-[50px] flex items-center justify-center border-2 border-blue-500 text-blue-500 font-extrabold text-2xl rounded-full shadow-lg mt-2 transition-transform duration-300 hover:scale-110 hover:text-purple-500">
+            A
+          </div>
         </Link>
 
-        <ul className=" hidden sm:flex flex-row gap-10">
+        <ul className="hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -36,71 +35,91 @@ const Navbar = () => {
               } hover:text-[#B600E0] font-medium cursor-pointer text-[18px]`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.href}`}> {link.title} </a>
+              <a href={`#${link.href}`}>{link.title}</a>
             </li>
           ))}
         </ul>
 
-        <div className="hidden sm:flex ml-[-30px]   ">
+        {/* Desktop Social Icons */}
+        <div className="hidden sm:flex ml-[-30px]">
           <a
-            href="https://www.linkedin.com/in/abdul-rahaman-99a647299/"
+            href="https://www.linkedin.com/in/abdulrcoder/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               src={linkedin}
-              alt="github"
+              alt="LinkedIn"
               height={30}
               width={30}
               className="cursor-pointer"
             />
           </a>
-          <a href="https://twitter.com/AbdulDevelop" target="_blank">
+          <a
+            href="https://leetcode.com/abdulrcoder"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
-              src={twitter}
-              alt="github"
+              src={leedcode}
+              alt="LeetCode"
               height={30}
               width={30}
-              className="cursor-pointer mx-[20px] "
+              className="cursor-pointer mx-[20px]"
             />
           </a>
-          <a href="https://github.com/abduldevlop" target="_blank">
+          <a
+            href="https://github.com/abdulrcoder"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={github}
-              alt="github"
+              alt="GitHub"
               height={30}
               width={30}
-              className="cursor-pointer "
+              className="cursor-pointer"
             />
           </a>
         </div>
 
+        {/* Mobile Social Icons and Menu */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <a
-              href="https://www.linkedin.com/in/abdul-rahaman-99a647299/"
+              href="https://www.linkedin.com/in/abdulrcoder/"
               target="_blank"
+              rel="noopener noreferrer "
             >
               <img
                 src={linkedin}
-                alt="github"
+                alt="LinkedIn"
                 height={25}
                 width={25}
                 className="cursor-pointer"
               />
             </a>
-            <a href="https://twitter.com/AbdulDevelop" target="_blank">
+            <a
+              href="https://leetcode.com/abdulrcoder"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src={twitter}
-                alt="github"
+                src={leedcode}
+                alt="LeetCode"
                 height={25}
                 width={25}
-                className="cursor-pointer"
+                className="cursor-pointer mx-[10px]"
               />
             </a>
-            <a href="https://github.com/abduldevlop" target="_blank">
+            <a
+              href="https://github.com/abdulrcoder"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={github}
-                alt="github"
+                alt="GitHub"
                 height={25}
                 width={25}
                 className="cursor-pointer mr-5"
@@ -130,7 +149,7 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.href}`}> {link.title} </a>
+                  <a href={`#${link.href}`}>{link.title}</a>
                 </li>
               ))}
             </ul>

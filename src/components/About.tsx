@@ -6,13 +6,13 @@ import { abdul } from "../assets";
 const About = () => {
   return (
     <div id="about">
-      <div className="mt-2 flex items-center justify-between">
+      <div className="mt-5 flex items-center justify-between">
         <div>
           <p className={styles.sectionSubText}>About me</p>
           <h2 className={styles.sectionHeadText}>Abdul Rahaman</h2>
 
           <h4 className="mt-4 text-[20px] max-w-3xl leading-[30px]">
-            Full Stack Developer / MERN
+            Full Stack Developer
           </h4>
           <h3 className="mt-2 text-[14px] max-w-3xl leading-[30px] text-gray-400">
             In the world of code, a full stack developer is the architect

@@ -7,6 +7,7 @@ import twitter from "./twitter.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import circle from "./circle.svg";
+import leedcode from "./leedcode.png";
 
 import abdul from "./abdul.png";
 
@@ -24,6 +25,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
 export {
+  leedcode,
   twitter,
   linkedin,
   abdul,

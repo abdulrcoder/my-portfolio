@@ -16,8 +16,8 @@ const Contact = () => {
             <div className="flex flex-col flex-1">
               <h3 className="mt-2 font-bold text-xl text-white">Mail</h3>
               <span className="text-[14px]">
-                <a href={`mailto:abduldevelop@gmail.com`}>
-                  abduldevelop@gmail.com
+                <a href={`mailto:abdulrcoder@gmail.com`}>
+                  abdulrcoder@gmail.com
                 </a>
               </span>
               <h3 className="mt-2 font-bold text-xl text-white">Phone</h3>
@@ -71,10 +71,7 @@ const Contact = () => {
             />
 
             <br />
-            <button
-              type="submit"
-              className="py-3 px-4 w-[250px] xl:w-[350px] bg-transparent  shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-xl outline-none border-none  "
-            >
+            <button className="py-3 px-4 w-[250px] xl:w-[350px] bg-transparent  shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-xl outline-none border-none  ">
               Submit
             </button>
           </form>
