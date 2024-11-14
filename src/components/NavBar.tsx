@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { close, github, leedcode, linkedin, menu, twitter } from "../assets";
+import { close, github, leedcode, linkedin, menu } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
